@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fcfcf4">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/home_havenfood"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:text="已经购买了食材"/>
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:text="点击进行智能配菜"
+            />
+        <Button
+            android:id="@+id/button_peicai"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="点击配菜"
+            android:textColor="#ffffff"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/type_se_bt_selector"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="添加食材+"
+        android:textSize="18dp"
+        android:textColor="#78979f"
+        android:layout_marginTop="10dp"
+        android:id="@+id/add_mat"
+        android:layout_marginBottom="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:orientation="horizontal"
+        android:background="@drawable/basket_rec_bg" >
+        <Util.XCRoundRectImageView
+            android:id="@+id/mat_rec_img1"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/mat_beaf"
+            android:layout_width="110dp"
+            android:layout_height="100dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mat_rec_text1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#78979f"
+                    android:textSize="17dp"
+                    android:text="牛肉" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:id="@+id/mat_nutrtionType1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营养分类："
+                    android:textColor="#a2a093"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/mat_type11"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/type_grain" />
+
+                <ImageView
+                    android:id="@+id/mat_type21"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/type_grain" />
+
+                <ImageView
+                    android:id="@+id/mat_type31"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/type_grain" />
+
+                <ImageView
+                    android:id="@+id/mat_type41"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/type_grain" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:id="@+id/ingresType1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营养价值："
+                    android:textColor="#a2a093"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:id="@+id/nutDetail1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#a2a093"
+                    android:singleLine="false"
+                    android:ellipsize="none"
+                    android:maxLines="3"
+                    android:inputType="textMultiLine"
+                    android:text="蛋白质含量高，而脂肪含量低，味道鲜美，属高蛋白、低脂肪，富含多种氨基酸和矿物质元素，具有消化吸收率高等特点"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:orientation="horizontal"
+        android:background="@drawable/basket_rec_bg" >
+        <Util.XCRoundRectImageView
+            android:id="@+id/mat_rec_img"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/potato"
+            android:layout_width="110dp"
+            android:layout_height="100dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mat_rec_text"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#78979f"
+                    android:textSize="17dp"
+                    android:text="番茄" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:id="@+id/mat_nutrtionType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营养分类："
+                    android:textColor="#a2a093"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/mat_type1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/type_grain" />
+
+                <ImageView
+                    android:id="@+id/mat_type2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/type_grain" />
+
+                <ImageView
+                    android:id="@+id/mat_type3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/type_grain" />
+
+                <ImageView
+                    android:id="@+id/mat_type4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/type_grain" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:id="@+id/ingresType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营养价值："
+                    android:textColor="#a2a093"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:id="@+id/nutDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#a2a093"
+                    android:singleLine="false"
+                    android:ellipsize="none"
+                    android:maxLines="3"
+                    android:text="含有丰富的维生素、矿物质、碳水化合物、有机酸及少量的蛋白质，有促进消化、利尿、抑制多种细菌作用。番茄中维生素D可保护血管，治高血压"
+                    android:inputType="textMultiLine"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:id="@+id/mat_recView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>-->
+
+
+</LinearLayout>
