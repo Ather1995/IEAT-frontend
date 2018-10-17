@@ -9,24 +9,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 
-import com.example.ieat.LoginActivity;
 import com.example.ieat.Person_infoActivity;
 import com.example.ieat.R;
+import com.example.ieat.SettingActivity;
 
 public class PersonFragment extends Fragment {
     private Button person_infor;
-    private ImageButton person_head;//login
+    private Button person_set;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        init();
     }
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container,  Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_person, null);
         person_infor = (Button) view.findViewById(R.id.person_infor);
-        person_head=(ImageButton)view.findViewById(R.id.person_head);
         person_infor.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(),Person_infoActivity.class);
@@ -34,15 +33,18 @@ public class PersonFragment extends Fragment {
 
             }
         });
-
-        person_head.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getActivity(), LoginActivity.class);
+        person_set = (Button) view.findViewById(R.id.person_set);
+        person_set.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),SettingActivity.class);
                 startActivity(intent);
             }
         });
         return view;
+    }
+
+    public void init(){
+
     }
     @Override
     public void onPause(){
