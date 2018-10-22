@@ -36,7 +36,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
         switch (v.getId()){
             case R.id.loginbutton:
                 ToastUtil.show(this,"login");
-                this.finish();
+//                this.finish();
                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(intent);
                 break;

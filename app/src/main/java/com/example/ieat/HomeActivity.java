@@ -22,9 +22,7 @@ import Util.ToastUtil;
  * Created by fanmiaomiao on 2018/3/12.
  */
 
-public class
-
-HomeActivity extends BaseActivity implements View.OnClickListener {
+public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private List<Fragment> fragments = new ArrayList<>();
     private List<String> fragtitles = new ArrayList<>();
     private ViewPager viewPager;
@@ -104,7 +102,7 @@ HomeActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View v){
         switch (v.getId()) {
             case R.id.Home:
-                ToastUtil.show(HomeActivity.this,"Home");
+             //   ToastUtil.show(HomeActivity.this,"Home");
                 LogUtil.Log(HomeActivity.this,"click","home");
                 changeTab(R.id.Home);
             case 0:
