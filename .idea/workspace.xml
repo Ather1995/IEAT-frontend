@@ -1,7 +1,280 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3d291ae-6217-4a2e-9d88-c49fba1942b6" name="Default" comment="" />
+    <list default="true" id="b3d291ae-6217-4a2e-9d88-c49fba1942b6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/iEat/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/.idea/caches/build_file_checksums.ser" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/.idea/codeStyles/Project.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/.idea/gradle.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/.idea/runConfigurations.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/build.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/proguard-rules.pro" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/androidTest/java/com/example/ieat/ExampleInstrumentedTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/AndroidManifest.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Adapter/BasketRecipeAdapter.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Adapter/FoodAdapter.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Adapter/HavenMatAdapter.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Adapter/MenuAdapter.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Adapter/MyFragmentPagerAdapter.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Adapter/MyRecyclerAdapter.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Base/AppCompatActivityCollector.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Base/BaseActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Entity/Food.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Entity/Material.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Entity/Menu.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Entity/Recipe.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Fragments/BasketFragment.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Fragments/HomeFragment.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Fragments/PersonFragment.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Fragments/TypeFragment.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Util/Constant.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Util/LogUtil.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Util/MyBanner.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Util/ToastUtil.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/Util/XCRoundRectImageView.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/com/example/ieat/Haven_foodActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/com/example/ieat/Haven_matActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/com/example/ieat/HomeActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/com/example/ieat/LoginActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/com/example/ieat/Person_infoActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/com/example/ieat/RecipeActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/com/example/ieat/RecipeIndexActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/com/example/ieat/RegisterActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/com/example/ieat/SettingActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/java/com/example/ieat/TreatActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/back.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/basket_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/basket_enter_market.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/basket_help.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/basket_help_explain.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/basket_rec_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/basketbt.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/color_cursor.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/edit_line_fo.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/edit_line_unf.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/edit_sel.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/fgps.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_beafpai.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_bepo1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_bepo2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_bepo3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_bepo4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_bing.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_ice.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_reco1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_reco2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_reco3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_reco4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_reco5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_reco6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_salad.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_yang.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/food_yi.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/forgetpassword.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/haven_matlogo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/home_havenfood.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/home_rec_1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/home_rec_2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/home_rec_3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/home_rec_4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/homebt.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/idmg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/left_banner_button.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/login.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/login_selector.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/loginp.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/logo1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/mat_beaf.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/menu_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/menu_item_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/menu_rec_1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/menu_rec_2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/menu_rec_3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/menu_rec_4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/menu_rec_5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/menu_rec_6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/password.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_div_line.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_down_1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_down_2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_down_3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_down_4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_down_5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_head.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_cm.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_dianjihou.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_dianjiqian.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_geren.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_hengxian.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_kg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_press.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_shengao.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_tizhong.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_tubiao.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/person_info_yuanjiao.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/personbt.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/potato.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/press_reg.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/pressset.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/psmg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/recent.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/recipe_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/recipe_heihujiaofeiliniupai.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/recipe_huafubingqilinqiu.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/recipe_info_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/recipe_shucainanguajuan.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/recipe_tankaoqiudao.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/reg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/reg_selector.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/register.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/regp.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/right_banner_button.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/search_home.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/searchbk.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/sebt_af.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/sebt_bf.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/setting_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/star_dark.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/star_light.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/thirdparty.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_caishi.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_dakuang.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_dianji.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_dianjiqian.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_ertong.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_gaoxueya.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_gou.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_guwu.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_haixian.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_hengxian.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_hunshi.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_jia.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_jian.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_jikou.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_ku.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_kuang.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_la.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_laoren.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_press.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_qingke.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_qita.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_selector.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_tangniao.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_teshu.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_tubiao.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_yongcan.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_yuanjiao.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/treat_zhurou.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_breakfast.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_dessert.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_egg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_fruit_vegetable.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_grain.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_meats.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_milk.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_se_bt.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_se_bt_af.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_se_bt_selector.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_seafood.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_soup.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_staple.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/type_western.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/typeback.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/typebt.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/drawable/yuanjiaojuxing.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/activity_home.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/activity_login.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/activity_person_info.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/activity_recipe.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/activity_register.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/activity_setting.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/basket_rec_layout.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/food_rec_layout.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/fragment_basket.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/fragment_home.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/fragment_person.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/fragment_type.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/home_haven_food.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/home_havenmaterial.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/home_rec_layout.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/home_recipe_info.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/home_treat.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/list_item.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/mat_rec_layout.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/layout/menu_rec_layout.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/mipmap-xhdpi/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/values-v19/attrs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/values-v19/styles.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/values/attrs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/values/colors.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/values/dimens.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/values/strings.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/main/res/values/styles.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/app/src/test/java/com/example/ieat/ExampleUnitTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/build.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/proguard-rules.pro" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/androidTest/java/com/youth/banner/ApplicationTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/AndroidManifest.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/Banner.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/BannerConfig.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/BannerScroller.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/Transformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/WeakHandler.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/listener/OnBannerClickListener.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/listener/OnBannerListener.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/loader/ImageLoader.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/loader/ImageLoaderInterface.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/ABaseTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/AccordionTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/BackgroundToForegroundTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/CubeInTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/CubeOutTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/DefaultTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/DepthPageTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/FlipHorizontalTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/FlipVerticalTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/ForegroundToBackgroundTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/RotateDownTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/RotateUpTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/ScaleInOutTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/StackTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/TabletTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/ZoomInTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/ZoomOutSlideTransformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/transformer/ZoomOutTranformer.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/java/com/youth/banner/view/BannerViewPager.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/res/animator/scale_with_alpha.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/res/drawable/black_background.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/res/drawable/gray_radius.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/res/drawable/no_banner.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/res/drawable/white_radius.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/res/layout/banner.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/res/values/attr.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/banner/src/main/res/values/ids.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/build.gradle" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/gradle.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/gradlew" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/gradlew.bat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/hs_err_pid9184.log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/replay_pid9184.log" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/iEat/settings.gradle" afterPath="" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -10,8 +283,36 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/banner/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,10 +322,19 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/.gitignore" />
+        <option value="$PROJECT_DIR$/banner/.gitignore" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -40,20 +350,48 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="IEAT-frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IEAT-frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="IEAT-frontend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="IEAT-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IEAT-frontend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IEAT-frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IEAT-frontend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="banner" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="IEAT-frontend" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="IEAT-frontend" type="1abcf292:AndroidViewProjectNode" />
+              <item name="banner" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="IEAT-frontend" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -175,31 +513,39 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21890548" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30514446" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -210,7 +556,23 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/replay_pid9184.log">
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/banner/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/banner/banner.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -218,34 +580,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ieat/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-1667">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/Util/Constant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="245">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IEAT-frontend.iml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ieat/Haven_foodActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1350">
+          <caret line="131" column="15" lean-forward="false" selection-start-line="131" selection-start-column="15" selection-end-line="131" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid9184.log">
+    <entry file="file://$PROJECT_DIR$/replay_pid9184.log" />
+    <entry file="file://$PROJECT_DIR$/gradle.properties" />
+    <entry file="file://$PROJECT_DIR$/gradlew.bat" />
+    <entry file="file://$PROJECT_DIR$/IEAT-frontend.iml" />
+    <entry file="file://$PROJECT_DIR$/hs_err_pid9184.log" />
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3441">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/banner/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
           <folding />
         </state>
       </provider>
