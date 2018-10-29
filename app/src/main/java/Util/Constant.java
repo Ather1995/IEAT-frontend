@@ -66,8 +66,8 @@ public class Constant {
     public static final String MATERIAL="material";
     public static final String FOODMATERIAL="foodMaterial";
     public static final String STEP="step";
-    public static final String IMAGE="imageURL";
-    public static final String FOODSTAR="star";
+    public static final String IMAGE="imageUrl";
+    public static final String FOODSTAR="foodStar";
 
     public static final String NUM_PEOPLE="num_people";
     public static final String NUM_FOOD="num_food";

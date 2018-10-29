@@ -17,6 +17,7 @@ public class saveUserInfo {
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("account",account);
         editor.putString("password",password);
+        System.out.println("saveAccountAndPassword:"+account+" "+password);
         editor.commit();
     }
 
@@ -30,7 +31,8 @@ public class saveUserInfo {
         SharedPreferences sharedPreferences=context.getSharedPreferences("userInfo",Context.MODE_PRIVATE);
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("userId",userId);
-        System.out.println(userId+"3333");
+        editor.putBoolean("setPersonInfo",false);
+        System.out.println("saveUserId:"+userId);
         editor.commit();
     }
 }

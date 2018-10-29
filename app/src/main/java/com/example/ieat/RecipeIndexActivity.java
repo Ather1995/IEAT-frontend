@@ -2,22 +2,15 @@ package com.example.ieat;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.example.ieat.RecipeActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,9 +18,7 @@ import org.json.JSONObject;
 import Adapter.MenuAdapter;
 import Base.BaseActivity;
 import Entity.Menu;
-import Entity.Recipe;
 import Util.Constant;
-import Util.LogUtil;
 
 public class RecipeIndexActivity extends BaseActivity {
     private RecyclerView menuRecyeclerView;
@@ -48,16 +39,6 @@ public class RecipeIndexActivity extends BaseActivity {
 
         initRecipe1();
 
-//        Intent intent=getIntent();
-//        String notice=intent.getStringExtra("notice");
-//        if(notice.equals("Haven_foodActivity")){
-//            initRecipe1();
-//        }else if(notice.equals("home")){
-//            initRecipe();
-//        }else if(notice.equals("reco")){
-//            initRecipe2();
-//        }
-
 
         menuRecyeclerView=(RecyclerView)findViewById(R.id.menu_recView);
         menuAdapter = new MenuAdapter(this, menuList);
@@ -73,9 +54,13 @@ public class RecipeIndexActivity extends BaseActivity {
 
         menuAdapter.setOnItemClickListener(new MenuAdapter.OnItemClickListener() {
             @Override
-            public void onClick(int position) {
+            public void onClick(int position, String foodId) {
                 Intent intent=new Intent(getApplication(),RecipeActivity.class);
-                startActivity(intent);
+                intent.putExtra(Constant.FOODID,foodId);
+//                当点击的不是空白的时候，即单数菜单的最后一个为fooodId为0
+                if(foodId!=""){
+                    startActivity(intent);
+                }
             }
             @Override
             public void onLongClick(int position) {
@@ -110,79 +95,57 @@ public class RecipeIndexActivity extends BaseActivity {
         });
     }
 
-    private void initRecipe(){
-        Menu menu = new Menu("food_yang","扬州炒饭");
-        ArrayList<String> ingrs = new ArrayList<>();
-        String ingrs_chaofan[]={"米饭","胡萝卜","玉米","豌豆","火腿"};
-        for(String s:ingrs_chaofan){
-            ingrs.add(s);
-        }
-        menu.setMenuIngredients(ingrs);
-        menuList.add(menu);
-        Menu menu1 = new Menu("food_yi","意大利面");
-        ArrayList<String> ingrs1 = new ArrayList<>();
-        String ingrs_yidalimian1[]={"番茄","西兰花","黑胡椒酱","意大利面"};
-        for(String s:ingrs_yidalimian1){
-            ingrs1.add(s);
-        }
-        menu1.setMenuIngredients(ingrs1);
-        menuList.add(menu1);
-        Menu menu2 = new Menu("food_beafpai","黑胡椒菲力牛排");
-        ArrayList<String> ingrs2 = new ArrayList<>();
-        String ingrs_shaobing2[]={"里脊肉","黑胡椒粉","洋葱粒","蒜末","黄油"};
-        for(String s:ingrs_shaobing2){
-            ingrs2.add(s);
-        }
-        menu2.setMenuIngredients(ingrs2);
-        menuList.add(menu2);
-        Menu menu3 = new Menu("food_salad","沙拉");
-        ArrayList<String> ingrs3 = new ArrayList<>();
-        String ingrs_shala3[]={"生菜","胡萝卜","藕块","番茄"};
-        for(String s:ingrs_shala3){
-            ingrs3.add(s);
-        }
-        menu3.setMenuIngredients(ingrs3);
-        menuList.add(menu3);
-        Menu menu4 = new Menu("food_bing","烧饼");
-        ArrayList<String> ingrs4 = new ArrayList<>();
-        String ingrs_shaobing4[]={"面粉","韭菜","猪肉"};
-        for(String s:ingrs_shaobing4){
-            ingrs.add(s);
-        }//烧饼 食材：面粉、韭菜、猪肉
-        menu4.setMenuIngredients(ingrs4);
-        menuList.add(menu4);
-        Menu menu5= new Menu("food_salad","沙拉");
-        ArrayList<String> ingrs5 = new ArrayList<>();
-        String ingrs_shala5[]={"生菜","胡萝卜","藕块","番茄"};
-        for(String s:ingrs_shala5){
-            ingrs.add(s);
-        }//沙拉 食材：生菜、胡萝卜、藕块、番茄
-        menu5.setMenuIngredients(ingrs5);
-        menuList.add(menu5);
-    }
+
     private void initRecipe1(){
 
         Intent intent = getIntent();
 
         int foodNum = intent.getIntExtra("foodNum",1);
-        for (int i = 0; i < foodNum; i++){
-            String str = intent.getStringExtra("food"+i);
+        Log.e("initRecipe1", String.valueOf(foodNum));
+        for (int i=0; foodNum>0; foodNum-=2,i++){
+            String str = intent.getStringExtra("food"+i*2);
+            String str1="";
+            if(foodNum!=1){
+            str1 = intent.getStringExtra("food"+(i*2+1));
+            }
             try {
                 JSONObject jsonObject = new JSONObject(str);
                 String foodId = jsonObject.getString(Constant.FOODID);
                 String foodName = jsonObject.getString(Constant.FOODNAME);
 //                String foodStar = jsonObject.getString(Constant.FOODSTAR);
-                String foooMaterial = jsonObject.getString(Constant.FOODMATERIAL);// "南瓜\",\"糯米粉\",\"糖\",\"芝士 "
-
+                String foodMaterial = jsonObject.getString(Constant.FOODMATERIAL);// "南瓜\",\"糯米粉\",\"糖\",\"芝士 "
                 String imageUrl = jsonObject.getString(Constant.IMAGE);
-//                String step = jsonObject.getString(Constant.STEP);
-                Menu menu = new Menu(imageUrl,foodName);
+                JSONObject jsonObject1;
+                String foodId1 = "";
+                String foodName1 = "";
+//                String foodStar = "";
+                String foodMaterial1 = "";// "南瓜\",\"糯米粉\",\"糖\",\"芝士 "
+                String imageUrl1 = "";
+                if(foodNum!=1){
+                    jsonObject1 = new JSONObject(str1);
+                    foodId1 = jsonObject1.getString(Constant.FOODID);
+                    foodName1 = jsonObject1.getString(Constant.FOODNAME);
+//                String foodStar = jsonObject1.getString(Constant.FOODSTAR);
+                    foodMaterial1 = jsonObject1.getString(Constant.FOODMATERIAL);// "南瓜\",\"糯米粉\",\"糖\",\"芝士 "
+                    imageUrl1 = jsonObject1.getString(Constant.IMAGE);
+                }
+                Menu menu = new Menu(imageUrl,foodName,foodId,imageUrl1,foodName1,foodId1);
                 ArrayList<String> ingrs = new ArrayList<>();
-                String[] ss = foooMaterial.split(",");
+                ArrayList<String> ingrs1 = new ArrayList<>();
+                String[] ss = foodMaterial.split(",");
+                String[] ss1=null;
+                if(foodNum!=1){
+                    ss1 = foodMaterial1.split(",");
+                    for (int j = 0; j < ss1.length; j++){
+                        ingrs1.add(ss1[j]);
+                        menu.setMenuIngredientsR(ingrs1);
+                    }
+                }
                 for (int j = 0; j < ss.length; j++){
                     ingrs.add(ss[j]);
                 }
-                menu.setMenuIngredients(ingrs);
+
+                menu.setMenuIngredientsL(ingrs);
                 menuList.add(menu);
 
             } catch (JSONException e) {
@@ -191,62 +154,7 @@ public class RecipeIndexActivity extends BaseActivity {
         }
     }
 
-    private void initRecipe2(){
-        Menu menu = new Menu("food_reco1","茄汁海鲜菇");
-        ArrayList<String> ingrs = new ArrayList<>();
-        String ingrs_chaofan[]={"西红柿","海鲜菇","葱姜","番茄酱"};
-        for(String s:ingrs_chaofan){
-            ingrs.add(s);
-        }
-        menu.setMenuIngredients(ingrs);
-        menuList.add(menu);
 
-        Menu menu1 = new Menu("food_reco2","虎皮青椒");
-        ArrayList<String> ingrs1 = new ArrayList<>();
-        String ingrs_yidalimian1[]={"青辣椒","生抽","蒜","姜","料酒"};
-        for(String s:ingrs_yidalimian1){
-            ingrs1.add(s);
-        }
-        menu1.setMenuIngredients(ingrs1);
-        menuList.add(menu1);
-
-        Menu menu2 = new Menu("food_reco3","美味鸡胸肉干丝");
-        ArrayList<String> ingrs2 = new ArrayList<>();
-        String ingrs_shaobing2[]={"鸡胸肉","橄榄油","番茄酱","蒜","小葱"};
-        for(String s:ingrs_shaobing2){
-            ingrs2.add(s);
-        }
-        menu2.setMenuIngredients(ingrs2);
-        menuList.add(menu2);
-
-        Menu menu3 = new Menu("food_reco4","鱼香肉丝");
-        ArrayList<String> ingrs3 = new ArrayList<>();
-        String ingrs_shala3[]={"猪腿肉","泡椒","姜","蒜","葱"};
-        for(String s:ingrs_shala3){
-            ingrs3.add(s);
-        }
-        menu3.setMenuIngredients(ingrs3);
-
-
-        Menu menu4 = new Menu("food_reco5","凉拌鲫鱼");
-        ArrayList<String> ingrs4 = new ArrayList<>();
-        String ingrs_shaobing4[]={"鲫鱼","醋","盐","老坛泡菜水"};
-        for(String s:ingrs_shaobing4){
-            ingrs4.add(s);
-        }//烧饼 食材：面粉、韭菜、猪肉
-        menu4.setMenuIngredients(ingrs4);
-
-        Menu menu5= new Menu("food_reco6","鸡蛋豆腐羹");
-        ArrayList<String> ingrs5 = new ArrayList<>();
-        String ingrs_shala5[]={"内脂豆腐","鸡蛋","西兰花","番茄"};
-        for(String s:ingrs_shala5){
-            ingrs5.add(s);
-        }//沙拉 食材：生菜、胡萝卜、藕块、番茄
-        menu5.setMenuIngredients(ingrs5);
-        menuList.add(menu5);
-        menuList.add(menu3);
-        menuList.add(menu4);
-    }
 
     protected boolean isSlideToBottom(RecyclerView recyclerView) {
         if (recyclerView == null) return false;

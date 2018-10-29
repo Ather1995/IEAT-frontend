@@ -1,7 +1,9 @@
 package com.example.ieat;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.view.View;
@@ -35,15 +37,17 @@ public class Person_infoActivity extends Activity implements View.OnClickListene
     private ImageButton tangniao;
     private ImageButton gaoxueya;
     private ImageButton click_;
-    boolean flag_la;
-    boolean flag_ku;
-    boolean flag_haixian;
-    boolean flag_hunshi;
-    boolean flag_guwu;
-    boolean flag_laoren;
-    boolean flag_ertong;
-    boolean flag_tangniao;
-    boolean flag_gaoxueya;
+    boolean flag_la = false;
+    boolean flag_ku = false;
+    boolean flag_haixian = false;
+    boolean flag_hunshi = false;
+    boolean flag_guwu = false;
+    boolean flag_laoren = false;
+    boolean flag_ertong = false;
+    boolean flag_tangniao = false;
+    boolean flag_gaoxueya = false;
+
+    private String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,9 @@ public class Person_infoActivity extends Activity implements View.OnClickListene
     }
 
     public void init(){
+        getAccount getAccount = new getAccount();
+        userId = getAccount.getUserId(Person_infoActivity.this);
+
         height = (EditText) findViewById(R.id.height);
         weight = (EditText) findViewById(R.id.weight);
         age = (EditText) findViewById(R.id.age);
@@ -82,6 +89,21 @@ public class Person_infoActivity extends Activity implements View.OnClickListene
         tangniao.setOnClickListener(this);
         gaoxueya.setOnClickListener(this);
         click_.setOnClickListener(this);
+
+        SharedPreferences sharedPreferences = this.getSharedPreferences("userInfo", this.MODE_PRIVATE);
+        Boolean setPersonInfo = sharedPreferences.getBoolean("setPersonInfo",false);
+        if (setPersonInfo == true){
+            JSONObject getInfoData = new JSONObject();
+            try {
+                getInfoData.put(Constant.REQUEST_TYPE,"getUserInfo");
+                getInfoData.put(Constant.USERID,userId);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            System.out.println(getInfoData);
+            sendData(getInfoData,"getUserInfo");
+        }
+
     }
 
     public void onClick(View v){
@@ -142,8 +164,6 @@ public class Person_infoActivity extends Activity implements View.OnClickListene
                 break;
             case R.id.click_:
                 JSONObject personInforData = new JSONObject();
-                getAccount getAccount = new getAccount();
-                String userId = getAccount.getUserId(Person_infoActivity.this);
                 String avoidFood = getavoidFood();
                 String suitPeople = getSuitPeople();
                 String flag_sex = getSex();
@@ -172,8 +192,7 @@ public class Person_infoActivity extends Activity implements View.OnClickListene
     }
     private void setUserInfo(){
         JSONObject getUserInfo = new JSONObject();
-        getAccount getAccount = new getAccount();
-        String userId = getAccount.getUserId(Person_infoActivity.this);
+
         try {
             getUserInfo.put(Constant.REQUEST_TYPE,"getUserInfo");
             getUserInfo.put(Constant.USERID,userId);
@@ -199,12 +218,21 @@ public class Person_infoActivity extends Activity implements View.OnClickListene
                             age.setText("男");
                         else if ("1".equals(jsonObject.getString(Constant.AGE)))
                             age.setText("女");
-                        String[] suitPeople = jsonObject.getString(Constant.SUITPEOPLE).split(",");
-//                        for(int i = 0; i < suitPeople.length; i++){
-//                            setSuitPeople(suitPeople[i]);
-//                        }
+                        String[] suitList = jsonObject.getString(Constant.SUITPEOPLE).replace("\"","").split(",");
+                        String[] avoidList = jsonObject.getString(Constant.AVOIDFOODTYPE).replace("\"","").split(",");
+
+                        for(int i = 0; i < suitList.length; i++){
+                            setSuitpeople(suitList[i]);
+                        }
+                        for(int i = 0; i < avoidList.length; i++){
+                            setAvoidFood(avoidList[i]);
+                        }
                     }else if (request_type.equals("updateUserInfo")){
                         System.out.println(jsonObject.getString(Constant.NOTICE));
+                        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor=sharedPreferences.edit();
+                        editor.putBoolean("setPersonInfo",true);
+                        editor.commit();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -334,5 +362,34 @@ public class Person_infoActivity extends Activity implements View.OnClickListene
         else flag_sex = "-1";
         return flag_sex;
     }
-
+    private void setSuitpeople(String suit) {
+        if (suit.equals(Constant.ISOLD)){
+            flag_laoren = true;
+            laoren.setImageResource(R.drawable.treat_gou);
+        } else if (suit.equals(Constant.ISCHILD)){
+            flag_ertong = true;
+            ertong.setImageResource(R.drawable.treat_gou);
+        } else if (suit.equals(Constant.ISHIGHBLOOD)){
+            flag_gaoxueya = true;
+            gaoxueya.setImageResource(R.drawable.treat_gou);
+        } else if (suit.equals(Constant.ISDIABETE)){
+            flag_tangniao = true;
+            tangniao.setImageResource(R.drawable.treat_gou);
+        }
+    }
+    private void setAvoidFood(String avoid){
+        if (avoid.equals(Constant.ISBITTER)){
+            flag_ku = true;
+            ku.setImageResource(R.drawable.treat_gou);
+        } else if (avoid.equals(Constant.ISSPICY)){
+            flag_la = true;
+            la.setImageResource(R.drawable.treat_gou);
+        } else if (avoid.equals(Constant.ISSEAFOOD)){
+            flag_haixian = true;
+            haixian.setImageResource(R.drawable.treat_gou);
+        } else if (avoid.equals(Constant.ISVEGE)){
+            flag_guwu = true;
+            guwu.setImageResource(R.drawable.treat_gou);
+        }
+    }
 }

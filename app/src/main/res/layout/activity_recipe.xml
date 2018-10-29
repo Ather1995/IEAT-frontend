@@ -13,7 +13,7 @@
             android:id="@+id/img"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:background="@drawable/recipe_bg" />
+            android:background="@drawable/white_radius" />
 
         <TextView
             android:id="@+id/foodName"
@@ -83,7 +83,7 @@
                 android:textSize="17dp"
                 android:text="食材："
                 android:textColor="#78979f"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:orientation="vertical"

@@ -9,6 +9,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -121,15 +122,54 @@ public class HomeFragment extends Fragment {
                     getAccount getAccount = new getAccount();
 
                     //不知道对不对
-                    String userId = getAccount.getUserId(new RecipeIndexActivity());
-
-                    try {
-                        RecipeIndexData.put(Constant.REQUEST_TYPE,"recommendFoodForThisUser");
-                        RecipeIndexData.put(Constant.USERID,userId);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                    String userId = getAccount.getUserId(getActivity());
+                    Log.e("不知道对不对userId:",userId);
+                    if(userId==null||userId==""){
+                        ToastUtil.show(getActivity(), "请登录！");
+                    }else {
+                        try {
+                            RecipeIndexData.put(Constant.REQUEST_TYPE,"recommendFoodForThisUser");
+                            RecipeIndexData.put(Constant.USERID,userId);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+//                        sendData(RecipeIndexData,"recommendFoodForThisUesr");
+                        try{
+                            JSONObject jsonObjecttest1=new JSONObject("{\"foodId\":430,\"foodName\":\"宫保鸡丁\",\"foodStar\":\"5\",\"foodMaterial\":\"鸡肉，青菜，蒜末\",\"imageUrl\":\"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540548826807&di=63160dd2d596e3f5b5d9c57d0c01f020&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F11385343fbf2b211c0b3b666c18065380cd78e7c.jpg\",\"step\":\"1.南瓜去籽切块。 2.将肉桂、海盐、黑胡椒和橄榄油混合均匀。 3.将南瓜皮朝下排入烤盘，将2中的调料均匀刷在南瓜上。 4.送入预热180度的烤箱烘烤约30分钟，确认南瓜熟透即可。\"} ");
+                            JSONObject jsonObjecttest2=new JSONObject("{\"foodId\":431,\"foodName\":\"红烧肉\",\"foodStar\":\"3\",\"foodMaterial\":\"肉，酱油，酱汁\",\"imageUrl\":\"https://img-blog.csdn.net/20150518174535407\",\"step\":\"1.南瓜去籽切块。 2.将肉桂、海盐、黑胡椒和橄榄油混合均匀。 3.将南瓜皮朝下排入烤盘，将2中的调料均匀刷在南瓜上。 4.送入预热180度的烤箱烘烤约30分钟，确认南瓜熟透即可。\"} ");
+                            JSONObject jsonObjecttest3=new JSONObject("{\"foodId\":432,\"foodName\":\"红烧肉11\",\"foodStar\":\"3\",\"foodMaterial\":\"肉，酱油，酱汁\",\"imageUrl\":\"http://s1.cdn.xiachufang.com/adc8271487ca11e6b87c0242ac110003_800w_600h.jpg@2o_50sh_1pr_1l_280w_216h_1c_1e_90q_1wh\",\"step\":\"1.南瓜去籽切块。 2.将肉桂、海盐、黑胡椒和橄榄油混合均匀。 3.将南瓜皮朝下排入烤盘，将2中的调料均匀刷在南瓜上。 4.送入预热180度的烤箱烘烤约30分钟，确认南瓜熟透即可。\"} ");
+                            JSONObject jsonObjecttest4=new JSONObject("{\"foodId\":433,\"foodName\":\"红烧肉22\",\"foodStar\":\"3\",\"foodMaterial\":\"肉，酱油，酱汁\",\"imageUrl\":\"http://s2.cdn.xiachufang.com/1872317a87c811e6a9a10242ac110002_2048w_1536h.jpg?imageView2/1/w/280/h/216/interlace/1/q/90\",\"step\":\"1.南瓜去籽切块。 2.将肉桂、海盐、黑胡椒和橄榄油混合均匀。 3.将南瓜皮朝下排入烤盘，将2中的调料均匀刷在南瓜上。 4.送入预热180度的烤箱烘烤约30分钟，确认南瓜熟透即可。\"} ");
+                            JSONObject jsonObjecttest5=new JSONObject("{\"foodId\":434,\"foodName\":\"宫保鸡丁3\",\"foodStar\":\"5\",\"foodMaterial\":\"鸡肉，青菜，蒜末\",\"imageUrl\":\"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540548826807&di=63160dd2d596e3f5b5d9c57d0c01f020&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F11385343fbf2b211c0b3b666c18065380cd78e7c.jpg\",\"step\":\"1.南瓜去籽切块。 2.将肉桂、海盐、黑胡椒和橄榄油混合均匀。 3.将南瓜皮朝下排入烤盘，将2中的调料均匀刷在南瓜上。 4.送入预热180度的烤箱烘烤约30分钟，确认南瓜熟透即可。\"} ");
+                            JSONObject jsonObjecttest6=new JSONObject("{\"foodId\":435,\"foodName\":\"红烧肉4\",\"foodStar\":\"3\",\"foodMaterial\":\"肉，酱油，酱汁\",\"imageUrl\":\"https://img-blog.csdn.net/20150518174535407\",\"step\":\"1.南瓜去籽切块。 2.将肉桂、海盐、黑胡椒和橄榄油混合均匀。 3.将南瓜皮朝下排入烤盘，将2中的调料均匀刷在南瓜上。 4.送入预热180度的烤箱烘烤约30分钟，确认南瓜熟透即可。\"} ");
+                            JSONObject jsonObjecttest7=new JSONObject("{\"foodId\":436,\"foodName\":\"红烧肉5\",\"foodStar\":\"3\",\"foodMaterial\":\"肉，酱油，酱汁\",\"imageUrl\":\"http://s1.cdn.xiachufang.com/adc8271487ca11e6b87c0242ac110003_800w_600h.jpg@2o_50sh_1pr_1l_280w_216h_1c_1e_90q_1wh\",\"step\":\"1.南瓜去籽切块。 2.将肉桂、海盐、黑胡椒和橄榄油混合均匀。 3.将南瓜皮朝下排入烤盘，将2中的调料均匀刷在南瓜上。 4.送入预热180度的烤箱烘烤约30分钟，确认南瓜熟透即可。\"} ");
+                            JSONObject jsonObjecttest8=new JSONObject("{\"foodId\":437,\"foodName\":\"红烧肉6\",\"foodStar\":\"3\",\"foodMaterial\":\"肉，酱油，酱汁\",\"imageUrl\":\"http://s2.cdn.xiachufang.com/1872317a87c811e6a9a10242ac110002_2048w_1536h.jpg?imageView2/1/w/280/h/216/interlace/1/q/90\",\"step\":\"1.南瓜去籽切块。 2.将肉桂、海盐、黑胡椒和橄榄油混合均匀。 3.将南瓜皮朝下排入烤盘，将2中的调料均匀刷在南瓜上。 4.送入预热180度的烤箱烘烤约30分钟，确认南瓜熟透即可。\"} ");
+                            Intent intent = new Intent(getActivity(), RecipeIndexActivity.class);
+                            intent.putExtra("notice","TreatActivity");
+                            int length = 7;
+                            intent.putExtra("foodNum",length);
+                            String str1 = jsonObjecttest1.toString();
+                            String str2 = jsonObjecttest2.toString();
+                            String str3 = jsonObjecttest3.toString();
+                            String str4 = jsonObjecttest4.toString();
+                            String str5 = jsonObjecttest5.toString();
+                            String str6 = jsonObjecttest6.toString();
+                            String str7 = jsonObjecttest7.toString();
+                            String str8 = jsonObjecttest8.toString();
+//                    String str3 = jsonObjecttest3.toString();
+                            intent.putExtra("food"+0, str1);
+                            intent.putExtra("food"+1, str2);
+                            intent.putExtra("food"+2, str3);
+                            intent.putExtra("food"+3, str4);
+//                  intent.putExtra("food"+0, str1);
+                            intent.putExtra("food"+4, str5);
+                            intent.putExtra("food"+5, str6);
+                            intent.putExtra("food"+6, str7);
+                            intent.putExtra("food"+7, str8);
+                            startActivity(intent);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
-                    sendData(RecipeIndexData,"recommendFoodForThisUesr");
 //                    Intent intent = new Intent(getActivity(), RecipeIndexActivity.class);
 //                    intent.putExtra("notice","home");
 //                    startActivity(intent);
@@ -156,23 +196,45 @@ public class HomeFragment extends Fragment {
             @Override
             public void onSuccess(String result) {
                 JSONObject jsonObject1= null;
+//                try {
+//                    jsonObject1 = new JSONObject(result);
+//                    JSONArray jsonArray=jsonObject1.getJSONArray("response");
+//                    JSONObject jsonObject = new JSONObject();
+//                    Intent intent = new Intent(getActivity(), RecipeIndexActivity.class);
+//
+//                    int length = jsonArray.length();
+//                    intent.putExtra("num_of_food",length);
+//                    for (int i = 0; i < length; i++){
+//                        jsonObject = jsonArray.getJSONObject(i);
+//                        String str = jsonObject.toString();
+//                        intent.putExtra("food"+i, str);
+//                    }
+//
+//                    intent.putExtra("notice","home");
+//                    startActivity(intent);
+//
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+                JSONObject jsonObject= null;
                 try {
-                    jsonObject1 = new JSONObject(result);
-                    JSONArray jsonArray=jsonObject1.getJSONArray("response");
-                    JSONObject jsonObject = new JSONObject();
-                    Intent intent = new Intent(getActivity(), RecipeIndexActivity.class);
+                    jsonObject = new JSONObject(result);
+                    JSONArray jsonArray = jsonObject.getJSONArray("response");
+                    if (request_type.equals("recommendFoodForThisUser")) {
+                        jsonObject=jsonArray.getJSONObject(0);
 
-                    int length = jsonArray.length();
-                    intent.putExtra("num_of_food",length);
-                    for (int i = 0; i < length; i++){
-                        jsonObject = jsonArray.getJSONObject(i);
-                        String str = jsonObject.toString();
-                        intent.putExtra("food"+i, str);
+                        Intent intent = new Intent(getActivity(), RecipeIndexActivity.class);
+                        intent.putExtra("notice","TreatActivity");
+                        int length = jsonArray.length();
+                        intent.putExtra("foodNum",length);
+
+                        for (int i = 0; i < length; i++){
+                            jsonObject = jsonArray.getJSONObject(i);
+                            String str = jsonObject.toString();
+                            intent.putExtra("food"+i, str);
+                        }
+                        startActivity(intent);
                     }
-
-                    intent.putExtra("notice","home");
-                    startActivity(intent);
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

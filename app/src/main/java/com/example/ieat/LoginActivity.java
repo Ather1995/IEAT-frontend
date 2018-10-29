@@ -131,7 +131,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                sendData(loginData,"login");
+//                sendData(loginData,"login");
 
                 //将账号密码保存在本地
 //                saveUserInfo saveUserInfo=new saveUserInfo();
@@ -139,10 +139,11 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
                         password.getText().toString(),getApplicationContext());
 
 
-                // saveUserInfo.saveUserId(userId,getApplicationContext());
+                saveUserInfo.saveUserId("1",getApplicationContext());
+                getAccount getAccount=new getAccount();
+                String userIdtest=getAccount.getUserId(LoginActivity.this);
+                System.out.println("9999_loginbutton"+userIdtest);
 
-
-                //     ToastUtil.show(this,"login");
                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(intent);
 
@@ -158,17 +159,18 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                sendData(registerData,"register");
+//                sendData(registerData,"register");
 
                 //将账号密码保存在本地
                 saveInfo.saveAccountAndPassword(account.getText().toString(),
                         password.getText().toString(),getApplicationContext());
-
+                //假的
                 //获取userId并保存在本地
                 saveUserInfo.saveUserId("1",getApplicationContext());
+
                 getAccount account=new getAccount();
                 String userid=account.getUserId(LoginActivity.this);
-                saveInfo.saveUserId(userid,getApplicationContext());
+                System.out.println("9999_registerbutton"+userid);
                 break;
             case R.id.forgetpassword:
                 ToastUtil.show(this,"forgetpassword");
@@ -187,17 +189,16 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
                 try {
                     jsonObject = new JSONObject(result);
                     JSONArray jsonArray=jsonObject.getJSONArray("response");
-                    System.out.println(jsonArray+"000000");
                     jsonObject = jsonArray.getJSONObject(0);
-                    System.out.println(jsonObject+"1000000");
                     if (jsonObject.getInt(Constant.STATUSCODE)==Constant.SUCCESS) {
                         if (request_type.equals("login")) {
                             //获取userId并保存在本地
-//                            saveUserInfo.saveUserId(jsonObject.getString("userId"),getApplicationContext());
-//                            getAccount getAccount=new getAccount();
-//                            String userIdtest=getAccount.getUserId(LoginActivity.this);
-//                            System.out.println("9999"+userIdtest);
+                            saveUserInfo.saveUserId(jsonObject.getString("userId"),getApplicationContext());
+                            getAccount getAccount=new getAccount();
+                            String userIdtest=getAccount.getUserId(LoginActivity.this);
+                            System.out.println("9999"+userIdtest);
                         }else{
+                            saveUserInfo.saveUserId(jsonObject.getString("userId"),getApplicationContext());
                             ToastUtil.show(LoginActivity.this, "注册成功！");
                         }
                     }
@@ -227,40 +228,5 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
             }
         },data);
     }
-
-
-
-//    private JSONObject data;
-
-
-//    public void postDatasync(){
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    OkHttpClient client = new OkHttpClient();//创建OkHttpClient对象
-//                    MediaType JSON = MediaType.parse("application/json; charset=utf-8");//数据类型为json格式
-//                    String jsonStr = "{\"request_type\":\"login\",\"account\":\"aaa\",\"password\":\"fff\",\"login_type\":\"tel\"}";
-//                    RequestBody body = RequestBody.create(JSON, jsonStr);
-//                    Request request = new Request.Builder()
-//                            .url("http://115.159.127.223/host/servlet/user/ParseJSONServlet")
-//                            .post(body)
-//                            .build();
-//                    Response response = null;
-//                    response = client.newCall(request).execute();//得到Response 对象
-//                    if (response.isSuccessful()) {
-//                        Log.d("kwwl","response.code()=="+response.code());
-//                        Log.d("kwwl","response.message()=="+response.message());
-//                        Log.d("kwwl","res=="+response.body().string());
-//                    }
-//                    else{
-//                        Log.d("kwwl","fail");
-//                    }
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }).start();
-//    }
 }
 

@@ -32,4 +32,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     implementation project(':banner')
     implementation 'org.apache.directory.studio:org.apache.commons.lang:2.6'
+    implementation 'org.apache.directory.studio:org.apache.commons.lang:2.6'
 }

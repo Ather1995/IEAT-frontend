@@ -2,6 +2,7 @@ package com.example.ieat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -53,6 +54,7 @@ public class RecipeActivity extends BaseActivity {
     public void initView(){
         Intent intent = getIntent();
         foodId = intent.getStringExtra(Constant.FOODID);
+        Log.e("RecipeActivity",foodId);
         JSONObject jsonObject = new JSONObject();
         String request_type = "getFoodInfoById";
         try {
@@ -61,7 +63,34 @@ public class RecipeActivity extends BaseActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        sendData(jsonObject,request_type);
+//        sendData(jsonObject,request_type);
+        String food_name = "冰黄瓜";
+        int food_star = 4;
+        String food_material = "新鲜黄瓜\",\"手捏少量盐 ";
+        food_material = food_material.replace("\"","");
+        String imageUrl = "http://s2.cdn.xiachufang.com/1872317a87c811e6a9a10242ac110002_2048w_1536h.jpg?imageView2/1/w/280/h/216/interlace/1/q/90";
+        String step_str = "1.黄瓜削皮削小块 2.手捏少量的盐均匀洒在黄瓜上拌匀，盐量就是只能吃出微微的咸 3.放冰箱冰着，然后就开吃！ ";
+        step_str=step_str.replace(" ","\n");
+        foodName.setText(food_name);
+        Glide.with(this).load(imageUrl).into(img);
+        material.setText(food_material);
+        step.setText(step_str);
+        if (food_star > 0){
+            star1.setImageResource(R.drawable.star_light);
+            if (food_star > 1){
+                star2.setImageResource(R.drawable.star_light);
+                if (food_star > 2){
+                    star3.setImageResource(R.drawable.star_light);
+                    if (food_star > 3){
+                        star4.setImageResource(R.drawable.star_light);
+                        if (food_star > 4){
+                            star5.setImageResource(R.drawable.star_light);
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     public void sendData(JSONObject data, final String request_type){
@@ -80,7 +109,6 @@ public class RecipeActivity extends BaseActivity {
                     food_material = food_material.replace("\"","");
                     String imageUrl = jsonObject.getString(Constant.IMAGE);
                     String step_str = jsonObject.getString(Constant.STEP);
-
                     foodName.setText(food_name);
                     Glide.with(RecipeActivity.this).load(imageUrl).into(img);
                     material.setText(food_material);
