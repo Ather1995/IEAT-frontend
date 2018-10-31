@@ -59,7 +59,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
     public void onClick(View v){
 
         JSONObject loginData = new JSONObject();
-        JSONObject registerData = new JSONObject();
+
 
 //        Context context=getContext
 
@@ -131,46 +131,47 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-//                sendData(loginData,"login");
+                sendData(loginData,"login");
 
                 //将账号密码保存在本地
-//                saveUserInfo saveUserInfo=new saveUserInfo();
+                saveUserInfo saveUserInfo=new saveUserInfo();
                 saveUserInfo.saveAccountAndPassword(account.getText().toString(),
                         password.getText().toString(),getApplicationContext());
 
 
-                saveUserInfo.saveUserId("1",getApplicationContext());
-                getAccount getAccount=new getAccount();
-                String userIdtest=getAccount.getUserId(LoginActivity.this);
-                System.out.println("9999_loginbutton"+userIdtest);
-
-                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                startActivity(intent);
-
+//                saveUserInfo.saveUserId("1",getApplicationContext());
+//                getAccount getAccount=new getAccount();
+//                String userIdtest=getAccount.getUserId(LoginActivity.this);
+//                System.out.println("9999_loginbutton"+userIdtest);
+//
+//                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+//                startActivity(intent);
+//                LoginActivity.this.finish();
                 break;
             case R.id.registerbutton:
+                Intent intent_registerbutton = new Intent(LoginActivity.this, RegisterActivity.class);
 
-
-                try {
-                    registerData.put(Constant.REQUEST_TYPE,"register");
-                    registerData.put(Constant.REGISTER_TYPE,"tel");
-                    registerData.put(Constant.ACCOUNT,account.getText().toString());
-                    registerData.put(Constant.PASSWORD,password.getText().toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-//                sendData(registerData,"register");
-
-                //将账号密码保存在本地
-                saveInfo.saveAccountAndPassword(account.getText().toString(),
-                        password.getText().toString(),getApplicationContext());
-                //假的
-                //获取userId并保存在本地
-                saveUserInfo.saveUserId("1",getApplicationContext());
-
-                getAccount account=new getAccount();
-                String userid=account.getUserId(LoginActivity.this);
-                System.out.println("9999_registerbutton"+userid);
+                startActivity(intent_registerbutton);
+//                try {
+//                    registerData.put(Constant.REQUEST_TYPE,"register");
+//                    registerData.put(Constant.REGISTER_TYPE,"tel");
+//                    registerData.put(Constant.ACCOUNT,account.getText().toString());
+//                    registerData.put(Constant.PASSWORD,password.getText().toString());
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+////                sendData(registerData,"register");
+//
+//                //将账号密码保存在本地
+//                saveInfo.saveAccountAndPassword(account.getText().toString(),
+//                        password.getText().toString(),getApplicationContext());
+//                //假的
+//                //获取userId并保存在本地
+//                saveUserInfo.saveUserId("1",getApplicationContext());
+//
+//                getAccount account=new getAccount();
+//                String userid=account.getUserId(LoginActivity.this);
+//                System.out.println("9999_registerbutton"+userid);
                 break;
             case R.id.forgetpassword:
                 ToastUtil.show(this,"forgetpassword");

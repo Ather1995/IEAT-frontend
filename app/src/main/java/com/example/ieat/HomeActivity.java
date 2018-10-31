@@ -3,8 +3,10 @@ package com.example.ieat;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ import Fragments.PersonFragment;
 import Fragments.TypeFragment;
 import Util.LogUtil;
 import Util.ToastUtil;
+import get.getAccount;
 
 /**
  * Created by fanmiaomiao on 2018/3/12.
@@ -116,6 +119,7 @@ HomeActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.Basket:
                 LogUtil.Log(HomeActivity.this,"click","basket");
+
                 changeTab(R.id.Basket);
             case 2:
                 break;

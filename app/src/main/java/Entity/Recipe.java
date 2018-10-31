@@ -11,10 +11,20 @@ import Util.Constant;
 
 public class Recipe {
     private String recipeName;
-    private String imgName;
+    private String imgUrl;
     private ArrayList<String> Ingredients;
     private ArrayList<Constant.Nutrtions> Nutrition;
     private int stars;
+    private String foodId;
+
+    public String getFoodId() {
+        return foodId;
+    }
+
+    public void setFoodId(String foodId) {
+        this.foodId = foodId;
+    }
+
     private ArrayList<String> Steps;
     public Recipe(String name){
         recipeName = name;
@@ -23,9 +33,22 @@ public class Recipe {
         Steps = new ArrayList<>();
     }
 
-    public void setImgName(String imgName){
-        this.imgName = imgName;
+    public void setRecipeName(String recipeName) {
+        this.recipeName = recipeName;
     }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public ArrayList<String> getSteps() {
+        return Steps;
+    }
+
 
     public void setStars(int stars){
         this.stars = stars;
@@ -62,9 +85,6 @@ public class Recipe {
         return Steps.get(pos);
     }
 
-    public String getImgName(){
-        return this.imgName;
-    }
     @Override
     public String toString(){
         return this.recipeName;

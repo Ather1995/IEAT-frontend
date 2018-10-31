@@ -114,6 +114,7 @@ public class RecipeIndexActivity extends BaseActivity {
                 String foodName = jsonObject.getString(Constant.FOODNAME);
 //                String foodStar = jsonObject.getString(Constant.FOODSTAR);
                 String foodMaterial = jsonObject.getString(Constant.FOODMATERIAL);// "南瓜\",\"糯米粉\",\"糖\",\"芝士 "
+                foodMaterial = jsonObject.getString(Constant.FOODMATERIAL).replace("\"","");
                 String imageUrl = jsonObject.getString(Constant.IMAGE);
                 JSONObject jsonObject1;
                 String foodId1 = "";
@@ -126,7 +127,8 @@ public class RecipeIndexActivity extends BaseActivity {
                     foodId1 = jsonObject1.getString(Constant.FOODID);
                     foodName1 = jsonObject1.getString(Constant.FOODNAME);
 //                String foodStar = jsonObject1.getString(Constant.FOODSTAR);
-                    foodMaterial1 = jsonObject1.getString(Constant.FOODMATERIAL);// "南瓜\",\"糯米粉\",\"糖\",\"芝士 "
+                    foodMaterial1 = jsonObject1.getString(Constant.FOODMATERIAL).replace("\"","");
+//                    foodMaterial1 = jsonObject1.getString(Constant.FOODMATERIAL);// "南瓜\",\"糯米粉\",\"糖\",\"芝士 "
                     imageUrl1 = jsonObject1.getString(Constant.IMAGE);
                 }
                 Menu menu = new Menu(imageUrl,foodName,foodId,imageUrl1,foodName1,foodId1);

@@ -74,8 +74,10 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
     @Override
     public void onViewRecycled(MenuViewHolder holder) {
         super.onViewRecycled(holder);
-        AsyncTask asyncTask = (AsyncTask) holder.imageViewRight.getTag(foodIdL);
+        AsyncTask asyncTask = (AsyncTask) holder.imageViewLeft.getTag(foodIdL);
+        AsyncTask asyncTask1 = (AsyncTask) holder.imageViewRight.getTag(foodIdR);
         asyncTask.cancel(true);
+        asyncTask1.cancel(true);
     }
 
     //填充onCreateViewHolder方法返回的holder中的控件
@@ -164,20 +166,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
                         mOnItemClickListener.onClick(position,menu.getFoodIdR());
                     }
                 });
-//            holder.itemView.setOnClickListener( new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Log.e("onClick","position");
-//                    mOnItemClickListener.onClick(position, menu.getFoodIdL());
-//                }
-//            });
-//            holder.itemView.setOnLongClickListener( new View.OnLongClickListener() {
-//                @Override
-//                public boolean onLongClick(View v) {
-//                    mOnItemClickListener.onLongClick(position);
-//                    return false;
-//                }
-//            });
         }
     }
 

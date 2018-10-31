@@ -1,9 +1,12 @@
 package Adapter;
 
 import android.content.Context;
-import android.media.Image;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
-import android.text.method.BaseKeyListener;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,13 +16,12 @@ import android.widget.TextView;
 
 import com.example.ieat.R;
 
-import org.w3c.dom.Text;
-
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 
-import Entity.Food;
 import Entity.Recipe;
-import Util.LogUtil;
 import Util.XCRoundRectImageView;
 
 /**
@@ -30,6 +32,7 @@ public class BasketRecipeAdapter extends RecyclerView.Adapter<BasketRecipeAdapte
     Context mContext;
     List<Recipe> mDatas;
     private LayoutInflater inflater;
+    private ImageView getImg;
     private OnItemClickListener mOnItemClickListener;
     public BasketRecipeAdapter(Context context, List<Recipe> datas) {
         this.mContext = context;
@@ -43,11 +46,43 @@ public class BasketRecipeAdapter extends RecyclerView.Adapter<BasketRecipeAdapte
     }
 
     //填充onCreateViewHolder方法返回的holder中的控件
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    public void onBindViewHolder(BasketViewHolder holder, final int position) {
+    public void onBindViewHolder(final BasketViewHolder holder, final int position) {
         holder.textView.setText(mDatas.get(position).getRecipeName());
-        int resID = mContext.getResources().getIdentifier(mDatas.get(position).getImgName(), "drawable", mContext.getPackageName());
-        holder.imageView.setBackground(mContext.getResources().getDrawable(resID));
+//        int resID = mContext.getResources().getIdentifier(mDatas.get(position).getImgName(), "drawable", mContext.getPackageName());
+//        holder.imageView.setBackground(mContext.getResources().getDrawable(resID));
+        getImg=holder.imageView;
+        getImg.setImageDrawable(mContext.getDrawable(R.mipmap.ic_launcher));
+        AsyncTask asyncTask =new AsyncTask<Void, Void, Bitmap>() {
+            @Override
+            protected Bitmap doInBackground(Void... params) {
+                try {
+                    URL url;
+                    if(mDatas.get(position).getImgUrl()==""){
+                        /* 这是一张网上的空白图像*/
+                        url= new URL("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540743430789&di=2f63e48eb87080fccb2de258515a33f2&imgtype=0&src=http%3A%2F%2Fwww.tiantang6.com%2Fuptupian%2Ft20144815281.jpg");
+                    }else {
+                        url = new URL(mDatas.get(position).getImgUrl());
+                    }
+
+
+                    Bitmap bitmap = BitmapFactory.decodeStream(url.openStream());
+                    return bitmap;
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+                super.onPostExecute(bitmap);
+                Log.e("reci的图片set:!","1111");
+                holder.imageView.setImageBitmap(bitmap);
+            }
+        }.execute();
         for(int i=0;i<5;i++){
             if(i>=mDatas.get(position).getStars()){
                 int resIDD = mContext.getResources().getIdentifier("star_dark", "drawable", mContext.getPackageName());
@@ -76,7 +111,9 @@ public class BasketRecipeAdapter extends RecyclerView.Adapter<BasketRecipeAdapte
             holder.itemView.setOnClickListener( new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mOnItemClickListener.onClick(position);
+                    Recipe recipe=mDatas.get(position);
+                    Log.e("recipe",recipe.getFoodId());
+                    mOnItemClickListener.onClick(position,recipe.getFoodId());
                 }
             });
             holder.itemView.setOnLongClickListener( new View.OnLongClickListener() {
@@ -129,7 +166,7 @@ public class BasketRecipeAdapter extends RecyclerView.Adapter<BasketRecipeAdapte
     }
 
     public interface OnItemClickListener{
-        void onClick( int position);
+        void onClick(int position, String foodId);
         void onLongClick( int position);
     }
     public void setOnItemClickListener(OnItemClickListener onItemClickListener ){

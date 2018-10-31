@@ -18,7 +18,7 @@ public class getAccount {
         return password;
     }
 
-    public String getUserId(Activity activity) {
+    public static String getUserId(Activity activity) {
         SharedPreferences sharedPreferences = activity.getSharedPreferences("userInfo", activity.MODE_PRIVATE);
         String userId=sharedPreferences.getString("userId","");
         if (userId==null||userId==""){

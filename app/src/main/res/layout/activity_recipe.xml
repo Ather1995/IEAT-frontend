@@ -158,5 +158,16 @@
             android:layout_width="300dp"
             android:layout_height="1dp"
             android:background="#78979f" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="@android:dimen/app_icon_size"
+            android:padding="10dp"
+            android:background="@color/colorPrimary"
+            android:shadowColor="@color/colorPrimary"
+            android:text="收藏"
+            android:textAlignment="center" />
     </LinearLayout>
+
 </ScrollView>

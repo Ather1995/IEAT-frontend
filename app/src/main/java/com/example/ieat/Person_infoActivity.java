@@ -19,6 +19,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import Util.Constant;
+import Util.ToastUtil;
 import get.getAccount;
 
 public class Person_infoActivity extends Activity implements View.OnClickListener{
@@ -90,9 +91,9 @@ public class Person_infoActivity extends Activity implements View.OnClickListene
         gaoxueya.setOnClickListener(this);
         click_.setOnClickListener(this);
 
-        SharedPreferences sharedPreferences = this.getSharedPreferences("userInfo", this.MODE_PRIVATE);
-        Boolean setPersonInfo = sharedPreferences.getBoolean("setPersonInfo",false);
-        if (setPersonInfo == true){
+//        SharedPreferences sharedPreferences = this.getSharedPreferences("userInfo", this.MODE_PRIVATE);
+//        Boolean setPersonInfo = sharedPreferences.getBoolean("setPersonInfo",false);
+        if (userId!=""){
             JSONObject getInfoData = new JSONObject();
             try {
                 getInfoData.put(Constant.REQUEST_TYPE,"getUserInfo");
@@ -102,6 +103,8 @@ public class Person_infoActivity extends Activity implements View.OnClickListene
             }
             System.out.println(getInfoData);
             sendData(getInfoData,"getUserInfo");
+        }else {
+            ToastUtil.show(this,"请登陆后，再设置个人信息！");
         }
 
     }
@@ -229,10 +232,11 @@ public class Person_infoActivity extends Activity implements View.OnClickListene
                         }
                     }else if (request_type.equals("updateUserInfo")){
                         System.out.println(jsonObject.getString(Constant.NOTICE));
-                        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("userInfo", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor=sharedPreferences.edit();
-                        editor.putBoolean("setPersonInfo",true);
-                        editor.commit();
+                        ToastUtil.show(Person_infoActivity.this,"个人信息更新成功！");
+//                        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+//                        SharedPreferences.Editor editor=sharedPreferences.edit();
+//                        editor.putBoolean("setPersonInfo",true);
+//                        editor.commit();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

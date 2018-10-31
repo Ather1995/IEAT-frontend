@@ -57,7 +57,7 @@ public class NetConnection {
                     switch (method) {//选择传送方式
                         case POST://POST方式以流的方式上传数据到服务器
                             uc = new URL(url).openConnection();
-                            uc.setConnectTimeout(60000);//连接的超时时间
+                            uc.setConnectTimeout(120000);//连接的超时时间
                             uc.setReadTimeout(10000);//设置响应的时间
                             uc.setDoOutput(true);//设置这个连接是否可以写出数据
                             uc.setRequestProperty("Content-Type","application/json;charset=UTF-8");//设置消息的类型

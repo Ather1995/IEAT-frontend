@@ -26,6 +26,7 @@ public class Constant {
 
     //本地访问路径
 //    public static String SERVE_URL="http://172.30.248.248:8090/servlet/user/ParseJSONServlet";
+//    public static String SERVE_URL="http://190.168.43.202:8090/servlet/user/ParseJSONServlet";
  //   public static String SERVE_URL="http://yapi.demo.qunar.com/mock/25060/api/ieat";
     //服务器访问路径
     public static String SERVE_URL="http://115.159.127.223/ieat/servlet/user/ParseJSONServlet";
