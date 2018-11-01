@@ -74,8 +74,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
     @Override
     public void onViewRecycled(MenuViewHolder holder) {
         super.onViewRecycled(holder);
-        AsyncTask asyncTask = (AsyncTask) holder.imageViewLeft.getTag(foodIdL);
-        AsyncTask asyncTask1 = (AsyncTask) holder.imageViewRight.getTag(foodIdR);
+        AsyncTask asyncTask = (AsyncTask) holder.imageViewLeft.getTag(R.id.menu_rec_img_left);
+        AsyncTask asyncTask1 = (AsyncTask) holder.imageViewRight.getTag(R.id.menu_rec_img_right);
         asyncTask.cancel(true);
         asyncTask1.cancel(true);
     }

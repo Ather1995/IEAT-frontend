@@ -198,6 +198,8 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
                             getAccount getAccount=new getAccount();
                             String userIdtest=getAccount.getUserId(LoginActivity.this);
                             System.out.println("9999"+userIdtest);
+                            ToastUtil.show(LoginActivity.this, "注册成功！请完成个人信息的填写");
+                            LoginActivity.this.finish();
                         }else{
                             saveUserInfo.saveUserId(jsonObject.getString("userId"),getApplicationContext());
                             ToastUtil.show(LoginActivity.this, "注册成功！");
